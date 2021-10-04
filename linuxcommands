@@ -1,0 +1,163 @@
+---------------------------------------------------
+Process Management
+---------------------------------------------------
+List Process                  : ps
+Process of User               : ps -u
+All Processes of System       : ps -e
+Process with more Info        : ps -ef
+Process related to Specific   : ps -ef | grep <searchterm>
+Create the Process            : <process> <time>
+Run process in Background     : <process> <time> &
+Kill process                  : kill <pid>
+Force Killing                 : kill -9 <pid>
+
+--------------------------------------------------
+User Management
+--------------------------------------------------
+Group Storing Location        : /etc/group
+Add group                     : groupadd <name>
+Add User                      : useradd -g <groupname> <uname>
+Check User Id                 : id <uname>
+Set/Change Password           : passwd <uname>
+Switch between user           : su - <uname>
+
+------------------------------------------------------
+Sudo Configuration
+------------------------------------------------------
+Config File location          : /etc/sudoers
+Switch User                   : su - <uname>
+
+-------------------------------------------------------
+Package Management
+--------------------------------------------------------
+List Installed Packages        : sudo yum list installed
+Available Packages             : sudo yum list available
+All Packages                   : sudo yum list all
+Install Package                : sudo yum install nginx
+Direct Install Package         : sudo yum install nginx -y
+Remove Package                 : sudo yum remove nginx -y
+Update Package                 : sudo yum update nginx -y
+Update System Packages         : sudo yum update -y
+---------------------------------------------------------
+Repos Location                 : /etc/yum.repos.d/*.repo
+---------------------------------------------------------
+List all repos                 : ls /etc/yum.repos.d
+Install using Url              : sudo yum install <url>
+Download repos                 : curl -s <url> -o <location>
+
+------------------------------------------------------------
+Service Management
+------------------------------------------------------------
+List all sevices               : sudo systemctl list-units -t service
+Check Status of Service        : sudo systemctl status <service>
+Start the Service              : sudo systemctl start <service>
+Stop the Service               : sudo systemctl stop <service>
+Restart the Service            : sudo systemctl restart <service>
+Enable service on ReBoot       : sudo systemctl enable <service>
+Disable service                : sudo systemctl disable <service>
+
+-------------------------------------------------------------
+Permissions Management
+-------------------------------------------------------------
+Check Ownership of File         : ls -l <filename>
+Change Ownership of File        : chown <owner> <filename>
+Change Group ownership          : chgrp <grpname> <filename>
+Change Owner and Group          : chown <owner>:<grpname> <filename>
+Change Ownership of Directory   : chown -R <owner> <filename>
+Change Group ownership Folder   : chgrp -R <grpname> <filename>
+Change Owner and Group Folder   : chown -R <owner>:<grpname> <filename>
+
+-----------------------------------------------------------------
+List Files
+-----------------------------------------------------------------
+List Files                      : ls
+List of hidden Files            : ls -A
+List with info                  : ls -l
+Create File                     : touch <filename>
+Remove FiLe                     : rm <filename>
+Remove File Without Prompt      : rm -f <filename>
+Copy File                       : cp <source-file> <destination-file>
+Move File                       : mv <source-file> <destination-file>
+---------------------------------------------------------------------
+Shell CLI Shortcuts.
+---------------------------------------------------------------------
+Some of the reference links are below.
+https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
+https://github.com/fliptheweb/bash-shortcuts-cheat-sheet
+Shell Scripting reference guides.
+https://devhints.io/bash
+
+-----------------------------------------------------------------
+Linux Directory
+----------------------------------------------------------------
+Root Directory                  : /
+Bash Shell & Programs stores    : /bin
+Applications Stores in          : /usr/bin
+Configuration Files             : /etc
+Optional Packages               : /opt
+Temporary Files                 : /tmp
+----------------------------------------------------------------
+Navigate Directories
+----------------------------------------------------------------
+Present Working Directory       : pwd
+Change Directory                : cd <directory>
+Goto Previous Directory         : cd -
+Goto Parent Directory           : cd ..
+Create Directory                : mkdir <directory>
+Make Directory Recursively      : mkdir -p demo/new/item
+Copy directory Contents         : cp -r dir1 dir2
+Move Directories                : mv source destination
+Remove Directories              : rmdir <directory>
+Remove Recursively              : rm -r <directory>
+Concatenate File Content        : cat <filename>
+Concatenate Content with Num    : cat -n <filename>
+Concatenate Content reverse     : tac <filename>
+Output line at starting         : head <filename>
+Output 10 lines at starting     : head -n 10 <filename>
+Output line at ending           : tail <filename>
+Output 10 lines at ending       : tail -n 10 <filename>
+Search content in Lines         : grep <word> <filename>
+Filter based on columns         : awk -F 'delimiter' '{print $column-number}' <filename>
+            Example             : awk -F : '{print $1,$2}' /etc/passwd
+--------------------------------------------------------------------------------------------------
+Regular Expressions.
+https://www.grymoire.com/Unix/Regular.html#uh-6
+SED & AWK
+https://github.com/chiranjibKonwar/Documentation/blob/master/Sed%20%26%20awk%20101Hacks%20%20.pdf
+--------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Linux Editors
+---------------------------------------------------------------------------------------------------
+Open Editor                     : vim <filename>
+Copy Line                       : yy with number 10yy
+Paste Line                      : p
+Delete Line                     : dd with number 10dd
+Copy Words                      : yw with number 10yw
+Paste Word                      : p
+Delete WOrd                     : dw with number 10dw
+Search Word                     : :/<WORD>
+Replace Word                    : :%s/WORD1/WORD2/
+Replace with flags              : : g, i :%s/WORD1/WORD2/
+                                  g= all possibilites
+                                  i= case-sensitive
+
+Save File                       : :w
+Quit Editor                     : :q
+Quit with out saving            : :q!
+Save and Quit                   : :wq
+Finding Files                   : find <location-to-find> -name <search-file>
+--------------------------------------------------------------------------------------
+Additional things to learn.
+https://alvinalexander.com/unix/edu/examples/find.shtml
+--------------------------------------------------------------------------------------
+Download Files                  : curl <url> -o <savewithname>
+Download with default name      : curl -O <url>
+Extract tar file                : tar -xf <filename>.tar.gz
+
+
+
+
+
+
+
+
